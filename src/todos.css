@@ -1,4 +1,31 @@
 .todos {
-    padding: 20px;
-    background-color:gray;
+  padding: 15px;
+  background-color: white;
+  margin: auto;
+  width: 500px;
+  border-radius: 8px;
+}
+.list {
+  list-style: none;
+  color: black;
+  border-radius: 60px;
+  background: white;
+}
+
+.no-task {
+  color: black;
+  background: white;
+}
+
+.delete{
+    position: absolute;
+    text-align: center;
+    margin-left: 440px;
+    margin-top: -50px;
+    height: 35px;
+    border-radius: 5px;
+    color: rgb(2, 2, 2);
+    background-color: rgb(228, 134, 111);
+    border: none;
+    
 }

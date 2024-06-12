@@ -13,15 +13,29 @@ const SearchBox = () => {
     setValue("");
   };
 
-  let renderTask = <h3>No task available</h3>;
+  const deleteHandler = (i) => {
+    let copyTask = [...mainTask];
+    copyTask.splice(i, 1);
+    setMainTask(copyTask);
+  };
 
-  if(mainTask.length>0) {
+  let renderTask = <h3 className="no-task">No task available</h3>;
+
+  if (mainTask.length > 0) {
     renderTask = mainTask.map((t, i) => {
       return (
-        <li className="list-item" key={i}>
-          <div>
-            <h3>{t.value}</h3>
-          </div>
+        <li className="list" key={i}>
+          
+            <h3 className="no-task">{t.value}</h3>
+          
+          <button
+            onClick={() => {
+              deleteHandler(i);
+            }}
+            className="delete"
+          >
+            Delete
+          </button>
         </li>
       );
     });
@@ -44,7 +58,9 @@ const SearchBox = () => {
         </button>
       </form>
       <hr />
-      <div className="todos">{renderTask}</div>
+      <div className="todos">
+        {renderTask}
+      </div>
     </div>
   );
 };

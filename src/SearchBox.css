@@ -1,5 +1,6 @@
 * {
   font-family: "Roboto", sans-serif;
+  background-color: #31363f;
 }
 
 .SearchBox {
@@ -8,16 +9,50 @@
 }
 
 .input {
-  width: 200px;
-  height: 30px;
+  width: 390px;
+  height: 34px;
+  background-color: white;
+  border: none;
+  border-radius: 3px;
 }
 
 .button {
-  width: 80px;
+  width: 130px;
   height: 36px;
   margin-left: 5px;
+  background: #FF4742;
+  border: 1px solid #FF4742;
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 16px;
+  min-height: 40px;
+  outline: 0;
+  padding: 12px 14px;
+  text-align: center;
+  text-rendering: geometricprecision;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  
 }
 
-.list-item {
-  list-style: none;
+
+.button:hover,
+.button:active {
+  background-color: initial;
+  background-position: 0 0;
+  color: #FF4742;
+}
+
+.button:active {
+  opacity: .5;
 }
